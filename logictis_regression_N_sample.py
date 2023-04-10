@@ -11,7 +11,7 @@ def train(X, y, learning_rate=0.01, epochs=1000):
     X = np.concatenate((np.ones((X.shape[0], 1)), X), axis=1)
     losses = []
 
-    for epoch in range(epochs):
+    for _ in range(epochs):
         y_pred = sigmoid(np.dot(X, theta))
         #loss binary cross entropy
         loss = -y*np.log(y_pred) - (1-y)*np.log(1-y_pred)
